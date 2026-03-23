@@ -1,0 +1,8 @@
+
+CREATE USER IF NOT EXISTS 'Administrador'@'localhost' IDENTIFIED BY 'contra123';
+GRANT ALL PRIVILEGES ON DB.* TO 'Administrador'@'localhost' WITH GRANT OPTION;
+
+CREATE USER IF NOT EXISTS 'Usuario'@'localhost' IDENTIFIED BY 'contra123';
+GRANT SELECT, INSERT, DELETE, EXECUTE ON DB.* TO 'Usuario'@'localhost';
+
+FLUSH PRIVILEGES;
